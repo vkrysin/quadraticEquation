@@ -1,0 +1,23 @@
+.quadratic-equation-solver__header {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.quadratic-equation-solver__request-coefficient {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.quadratic-equation-solver__form {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.quadratic-equation-solver__form__item > label {
+    display: inline-block;
+    width: 11px;
+}
+.quadratic-equation-solver__form__item > input {
+    margin-left: 5px;
+}
+.quadratic-equation-solver__button {
+    border-radius: 2px;
+    margin-bottom: 20px;
+}

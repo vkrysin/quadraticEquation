@@ -7,6 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="quadratic-equation-solver">
+        <div class="quadratic-equation-solver__header">
+            Решение квадратного уравнения
+        </div>
+        <div class="quadratic-equation-solver__request-coefficient">
+            Введите коэффициенты:
+        </div>
+        <form class="quadratic-equation-solver__form">
+            <div class="quadratic-equation-solver__form__item">
+                <label for="aIndex">a</label>
+                <input type="text" class="aIndex" value="10">
+            </div>
+            <div class="quadratic-equation-solver__form__item">
+                <label for="bIndex">b</label>
+                <input type="text" class="bIndex">
+            </div>
+           <div class="quadratic-equation-solver__form__item">
+                <label for="cIndex">c</label>
+                <input type="text" class="cIndex">
+           </div>
+        </form>
+        <button class="quadratic-equation-solver__button">
+            Решить
+        </button>
+        <div class="quadratic-equation-solver__roots"></div>
+    </div>
 </body>
 </html>
