@@ -1,9 +1,11 @@
-import {sqrt, pow, complex, add, multiply, floor} from "mathjs";
+const {sqrt, pow, complex, add, multiply, floor} = require("./node_modules/mathjs");
+
 
 function solve() {
 
     let coefficients = getCoefficient()
-     //short alias for coefficients
+    
+    //short alias for coefficients
     let a,b,c
 
     try {
@@ -22,8 +24,12 @@ function solve() {
             x2: floor( multiply( add((-1 * b), multiply(-1, sqrt(pow(b, 2) - 4 * a * c))),  1 / ( 2 * a)), 2)
         }
 
+    printAnswer(roots.x1, roots.x2)
+}
+
+function printAnswer(x1, x2) {
     document.getElementsByClassName(
-        "quadratic-equation-solver__roots")[0].textContent = "Roots: " + roots.x1 + "; " + roots.x2
+        "quadratic-equation-solver__roots")[0].textContent = "Roots: " + x1 + "; " + x2
 }
 
 function getCoefficient() {
@@ -44,6 +50,20 @@ function getCoefficient() {
     return coefficients
 }
 
-let buttonSolver = document.getElementsByClassName("quadratic-equation-solver__button")[0]
-buttonSolver.addEventListener("click", () => solve())
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('Not part of module.exports but still appearing in terminal, why?');
+    let buttonSolver = document.getElementsByClassName("quadratic-equation-solver__button")[0]
+    buttonSolver.addEventListener("click", () => manageSolve())
+})
 
+
+function sum(a, b) {
+  return a + b;
+}
+
+module.exports = {
+    getCoefficient,
+    printAnswer,
+    solve,
+    sum
+}
