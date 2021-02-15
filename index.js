@@ -7,12 +7,14 @@ function manageSolve() {
     
     if (coefficients === undefined) {
         alert('Enter all coefficients')
-        return
+        return false
     }
 
     let roots = findRoots(coefficients.a, coefficients.b, coefficients.c)
 
     printAnswer(roots.x1, roots.x2)
+
+    return true
 }
 
 function findRoots(a, b, c) {
@@ -27,6 +29,7 @@ function findRoots(a, b, c) {
 function printAnswer(x1, x2) {
     document.getElementsByClassName(
         "quadratic-equation-solver__roots")[0].textContent = "Roots: " + x1 + "; " + x2
+    return {x1, x2}
 }
 
 function getCoefficient() {
