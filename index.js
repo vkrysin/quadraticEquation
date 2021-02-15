@@ -1,3 +1,4 @@
+const { isNumber } = require("lodash");
 const {sqrt, pow, complex, add, multiply, floor} = require("./node_modules/mathjs");
 
 
@@ -42,7 +43,11 @@ function getCoefficient() {
     
     if(coefficients.a === ""  ||
        coefficients.b === ""  ||
-       coefficients.c === "") 
+       coefficients.c === ""  ||
+       
+       isNaN(coefficients.a) ||
+       isNaN(coefficients.b) ||
+       isNaN(coefficients.c)) 
        {
             return
        }        
@@ -56,15 +61,9 @@ document.addEventListener('DOMContentLoaded', function () {
     buttonSolver.addEventListener("click", () => manageSolve())
 })
 
-
-function sum(a, b) {
-  return a + b;
-}
-
 module.exports = {
     findRoots,
     getCoefficient,
     printAnswer,
-    manageSolve,
-    sum
+    manageSolve
 }

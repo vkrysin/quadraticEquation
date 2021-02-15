@@ -1,9 +1,6 @@
 const { before } = require('lodash');
-const { getCoefficient, printAnswer, manageSolve, sum, findRoots} = require('./index.js')
+const { getCoefficient, printAnswer, manageSolve, findRoots} = require('../index.js')
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
-});
 
 describe('(1,5,4)={-1,-4}', () => {
   //load necessary dom
@@ -21,7 +18,7 @@ describe('(1,5,4)={-1,-4}', () => {
       x2: -4
     })
   })
-  test('get right coefficiens', () => {
+  test('get right coefficients', () => {
 
     expect(getCoefficient()).toEqual({
       a: 1,
@@ -39,3 +36,4 @@ describe('(1,5,4)={-1,-4}', () => {
     })
   })
 })
+
