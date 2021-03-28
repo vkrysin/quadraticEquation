@@ -27,11 +27,5 @@ describe('(1,5,4)={-1,-4}', () => {
   test('solve Manager return true', () => {
     expect(manageSolve()).toBeTruthy()
   })
-  test('print Answer get right value', () => {
-    expect(printAnswer(-1, -4)).toEqual({
-      x1: -1,
-      x2: -4
-    })
-  })
 })
 

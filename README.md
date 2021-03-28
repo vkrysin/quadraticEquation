@@ -4,3 +4,5 @@
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=vladkrysin_quadraticEquation&metric=bugs)](https://sonarcloud.io/dashboard?id=vladkrysin_quadraticEquation)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=vladkrysin_quadraticEquation&metric=ncloc)](https://sonarcloud.io/dashboard?id=vladkrysin_quadraticEquation)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=vladkrysin_quadraticEquation&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=vladkrysin_quadraticEquation)
+# Example of work
+![Alt text](app.png?raw=true "Title")
