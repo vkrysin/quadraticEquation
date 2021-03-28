@@ -28,7 +28,7 @@ function findRoots(a, b, c) {
             }
         }
         else {
-            return c / b
+            return -c / b
         }
     }
     else {
