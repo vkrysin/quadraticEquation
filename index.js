@@ -13,24 +13,50 @@ function manageSolve() {
 
     let roots = findRoots(coefficients.a, coefficients.b, coefficients.c)
 
-    printAnswer(roots.x1, roots.x2)
+    printAnswer(roots)
 
     return true
 }
 
 function findRoots(a, b, c) {
-    //calc roots with discriminant formula
-    //functions multiply,sqrt,add - can work with complex numbers
-    return {
-        x1: floor(multiply(add((-1 * b), sqrt(pow(b, 2) - 4 * a * c)), 1 / (2 * a)), 2),
-        x2: floor(multiply(add((-1 * b), multiply(-1, sqrt(pow(b, 2) - 4 * a * c))), 1 / (2 * a)), 2)
+    if ( a == 0 ) {
+        if ( b == 0) {
+            if ( c == 0) {
+                return Infinity
+            } else {
+                return null
+            }
+        }
+        else {
+            return c / b
+        }
+    }
+    else {
+        //calc roots with discriminant formula
+        //functions multiply,sqrt,add - can work with complex numbers
+        return {
+            x1: floor(multiply(add((-1 * b), sqrt(pow(b, 2) - 4 * a * c)), 1 / (2 * a)), 2),
+            x2: floor(multiply(add((-1 * b), multiply(-1, sqrt(pow(b, 2) - 4 * a * c))), 1 / (2 * a)), 2)
+        }
     }
 }
 
-function printAnswer(x1, x2) {
+function printAnswer(roots) {
+    let answer
+    if ( roots === Infinity ) {
+        answer = "Infinity"
+    }
+    else if ( roots === null) {
+        answer = "no"
+    }
+    else if ( isNumber(roots) ) {
+        answer = `x = ${roots}`
+    }
+    else if ( typeof roots.x1 !== 'undefined') {
+        answer = `${roots.x1}` + "; " + `${roots.x2}`
+    }
     document.getElementsByClassName(
-        "quadratic-equation-solver__roots")[0].textContent = "Roots: " + x1 + "; " + x2
-    return {x1, x2}
+        "quadratic-equation-solver__roots")[0].textContent = `Roots: ${answer}`
 }
 
 function getCoefficient() {
