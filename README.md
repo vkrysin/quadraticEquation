@@ -1,5 +1,5 @@
 # quadraticEquation
-[![Build Status](https://travis-ci.com/vladkrysin/quadraticEquation.svg?branch=master)](https://travis-ci.com/vladkrysin/quadraticEquation)
+[![Build Status](https://travis-ci.com/vkrysin/quadraticEquation.svg?branch=master)](https://travis-ci.com/vladkrysin/quadraticEquation)
 [![Coverage Status](https://coveralls.io/repos/github/vladkrysin/quadraticEquation/badge.svg)](https://coveralls.io/github/vladkrysin/quadraticEquation)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=vladkrysin_quadraticEquation&metric=bugs)](https://sonarcloud.io/dashboard?id=vladkrysin_quadraticEquation)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=vladkrysin_quadraticEquation&metric=ncloc)](https://sonarcloud.io/dashboard?id=vladkrysin_quadraticEquation)
